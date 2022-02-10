@@ -1,0 +1,9 @@
+{
+  "name": "bank-csv-importer",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "any-date-parser": "^1.5.1"
+  },
+  "version": "0.0.1"
+}
