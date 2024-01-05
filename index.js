@@ -388,6 +388,7 @@ module.exports = function(data) {
 	*/
 
 	return {
+		header,
 		records,
 		typedRecords,
 		headerGuesses
