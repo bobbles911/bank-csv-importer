@@ -5,6 +5,6 @@
   "dependencies": {
     "any-date-parser": "^1.5.4"
   },
-  "type" : "module",
-  "version": "0.0.2"
+  "type": "module",
+  "version": "0.0.3"
 }
