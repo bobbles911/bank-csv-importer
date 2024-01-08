@@ -3,7 +3,8 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
-    "any-date-parser": "^1.5.1"
+    "any-date-parser": "^1.5.4"
   },
+  "type" : "module",
   "version": "0.0.2"
 }

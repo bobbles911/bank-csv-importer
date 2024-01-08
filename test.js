@@ -1,6 +1,6 @@
-const fs = require("fs");
-const path = require("path");
-const bankImport = require("./index.js");
+import fs from "fs";
+import path from "path";
+import bankImport from "./index.js";
 
 // Read all .csv files from /testdata
 // Read previous results, compare to new results
