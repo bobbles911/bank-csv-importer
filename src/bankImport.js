@@ -28,10 +28,10 @@ function detectSeparator(lines) {
 	lines = lines.slice(0, 20);
 
 	// Strip anything in quotes
-	lines = lines.map(line => {
-		return line.replace(/"[^"]+"/g, "")
-			.replace(/'[^']+'/g, "");
-	});
+	lines = lines.map(
+		line => line.replace(/"[^"]+"/g, "")
+			.replace(/'[^']+'/g, "")
+	);
 
 	// Count which separator char appears the most
 
