@@ -1,0 +1,9 @@
+{
+	"entireRowTypes" : ["Date", null, null, "Number", "Number", null, null],
+	"headerGuesses" : {
+		"date" : 0,
+		"amount" : 3,
+		"balance" : 4,
+		"description" : 2
+	}
+}

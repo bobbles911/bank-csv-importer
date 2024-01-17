@@ -104,7 +104,7 @@ function testdir(dirPath) {
 							}
 
 							if (row[i].constructor.name !== expected.entireRowTypes[i]) {
-								errors.push("Expected entire row type mismatch: "
+								errors.push(`Expected entire row type mismatch: ${fileName}: `
 									+ "Expected " + expected.entireRowTypes[i] + " but got: "
 									+ row[i]);
 							}
@@ -113,9 +113,13 @@ function testdir(dirPath) {
 
 					// Compare if header guesses match
 					for (let [headerGuessName, index] of Object.entries(expected.headerGuesses)) {
+						if (index === null) {
+							continue; // skip null
+						}
+
 						// Header guess index of result must equal that of expected
 						if (result.headerGuesses[headerGuessName] !== index) {
-							errors.push("Expected header guess mismatch: "
+							errors.push(`Expected header guess mismatch: ${fileName}: `
 								+ `Expected ${headerGuessName} at index ${index} but got index `
 								+ result.headerGuesses[headerGuessName]);
 						}
