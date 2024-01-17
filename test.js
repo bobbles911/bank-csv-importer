@@ -41,10 +41,14 @@ function testdir(dirPath) {
 
 	for (let fileName of fileNames) {
 		if (path.extname(fileName) == ".csv") {
-			let data = fs.readFileSync(path.join(dirPath, fileName), "utf-8");
+			const testDataPath = path.join(dirPath, fileName);
+			const expectedPath = path.join(dirPath, path.basename(fileName, ".csv") + ".expected.json");
+
+			let data = fs.readFileSync(testDataPath, "utf-8");
 
 			try {
 				let result = bankImport(data);
+
 				let resultsPath = path.join(dirPath, "output", path.basename(fileName, ".csv") + ".output.json");
 				let typesPath = path.join(dirPath, "output", path.basename(fileName, ".csv") + ".output.types.json");
 				let resultsPathFailed = path.join(dirPath, "output", path.basename(fileName, ".csv") + ".output.TEST_FAILED.json");
@@ -85,6 +89,42 @@ function testdir(dirPath) {
 					if (typesString !== prevTypes) {
 						fs.writeFileSync(typesPathFailed, typesString);
 						console.log("Writing failed new types to", typesPathFailed);
+					}
+				}
+
+				// Compare the expected data to the actual parsed data
+				try {
+					const expected = JSON.parse(fs.readFileSync(expectedPath, {encoding : "utf8"}));
+
+					// Compare if entire columns match the type given by expected.entireRowTypes array
+					for (let row of result.typedRecords) {
+						for (let i = 0; i < expected.entireRowTypes.length; i ++) {
+							if (expected.entireRowTypes[i] === null) {
+								continue; // skip null
+							}
+
+							if (row[i].constructor.name !== expected.entireRowTypes[i]) {
+								errors.push("Expected entire row type mismatch: "
+									+ "Expected " + expected.entireRowTypes[i] + " but got: "
+									+ row[i]);
+							}
+						}
+					}
+
+					// Compare if header guesses match
+					for (let [headerGuessName, index] of Object.entries(expected.headerGuesses)) {
+						// Header guess index of result must equal that of expected
+						if (result.headerGuesses[headerGuessName] !== index) {
+							errors.push("Expected header guess mismatch: "
+								+ `Expected ${headerGuessName} at index ${index} but got index `
+								+ result.headerGuesses[headerGuessName]);
+						}
+					}
+				} catch (error) {
+					if (error.code == "ENOENT") {
+						console.log("Warning: data expected file did not exist, skipping", expectedPath);
+					} else {
+						throw error;
 					}
 				}
 			} catch (error) {
