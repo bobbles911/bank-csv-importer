@@ -97,7 +97,7 @@ function testdir(dirPath) {
 					const expected = JSON.parse(fs.readFileSync(expectedPath, {encoding : "utf8"}));
 
 					// Compare if entire columns match the type given by expected.entireRowTypes array
-					for (let row of result.typedRecords) {
+					result.typedRecords.forEach((row, index) => {
 						for (let i = 0; i < expected.entireRowTypes.length; i ++) {
 							if (expected.entireRowTypes[i] === null) {
 								continue; // skip null
@@ -106,10 +106,12 @@ function testdir(dirPath) {
 							if (row[i].constructor.name !== expected.entireRowTypes[i]) {
 								errors.push(`Expected entire row type mismatch: ${fileName}: `
 									+ "Expected " + expected.entireRowTypes[i] + " but got: "
-									+ row[i]);
+									+ `"${row[i]}" (${row[i].constructor.name})`
+									+ `\n	Column: ${i}`
+									+ `\n	Row: ${index}: ${row}`);
 							}
 						}
-					}
+					});
 
 					// Compare if header guesses match
 					for (let [headerGuessName, index] of Object.entries(expected.headerGuesses)) {
