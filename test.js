@@ -8,6 +8,21 @@ import bankImport from "./index.js";
 
 let errors = [];
 
+function getTypes(typedRecords) {
+	// Get types as strings. Deep copy!
+	let types = [...typedRecords];
+
+	for (let i = 0; i < types.length; i ++) {
+		types[i] = [...types[i]];
+
+		for (let j = 0; j < types[i].length; j ++) {
+			types[i][j] = types[i][j].constructor.name;
+		}
+	}
+
+	return types;
+}
+
 function testdir(dirPath) {
 	let fileNames;
 
@@ -32,17 +47,11 @@ function testdir(dirPath) {
 				let result = bankImport(data);
 				let resultsPath = path.join(dirPath, "output", path.basename(fileName, ".csv") + ".output.json");
 				let typesPath = path.join(dirPath, "output", path.basename(fileName, ".csv") + ".output.types.json");
+				let resultsPathFailed = path.join(dirPath, "output", path.basename(fileName, ".csv") + ".output.TEST_FAILED.json");
+				let typesPathFailed = path.join(dirPath, "output", path.basename(fileName, ".csv") + ".output.types.TEST_FAILED.json");
 
-				// Get types as strings. Deep copy!
-				let types = [...result.typedRecords];
-
-				for (let i = 0; i < types.length; i ++) {
-					types[i] = [...types[i]];
-
-					for (let j = 0; j < types[i].length; j ++) {
-						types[i][j] = types[i][j].constructor.name;
-					}
-				}
+				// Get types as strings
+				let types = getTypes(result.typedRecords);
 
 				// Stringify
 				let resultString = JSON.stringify(result, null, "\t");
@@ -67,6 +76,16 @@ function testdir(dirPath) {
 
 				if (resultString !== prevResult || typesString !== prevTypes) {
 					errors.push("Mismatch with data file " + fileName);
+
+					if (resultString !== prevResult) {
+						console.log("Writing failed new results to", resultsPathFailed);
+						fs.writeFileSync(resultsPathFailed, resultString);
+					}
+
+					if (typesString !== prevTypes) {
+						fs.writeFileSync(typesPathFailed, typesString);
+						console.log("Writing failed new types to", typesPathFailed);
+					}
 				}
 			} catch (error) {
 				console.log("Error", error);
