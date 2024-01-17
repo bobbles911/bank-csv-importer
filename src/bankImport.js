@@ -165,23 +165,29 @@ export default function(data) {
 		};
 	}
 
-	// Check all records have the same number of fields
-	for (let i = 1; i < records.length; i ++) {
-		if (records[i-1].length != records[i].length) {
-			throw {
-				name : "FieldCountMismatch",
-				message : `Not all records have the same number of fields:\n${records[i-1]}\n${records[i]}`
-			};
-		}
-	}
+	// Find the row with the most fields
+	const longestFieldCount = records.map(row => row.length)
+		.reduce((acc, cur) =>  cur > acc ? cur : acc, 0);
 
-	// Field counts are not zero...
-	if (records[0].length == 0) {
+	// Remove any zero length rows (probably shouldn't ever be required...)
+	records = records.filter(row => row.length > 0);
+
+	// This probably won't ever occur either, but best to check...
+	if (longestFieldCount == 0 || records.length == 0) {
 		throw {
 			name : "NoFields",
 			message : "No fields found in data"
 		};
 	}
+
+	// Pad all other rows to the longest length
+	records = records.map(row => {
+		if (row.length < longestFieldCount) {
+			row = row.concat(new Array(longestFieldCount - row.length).fill(""));
+		}
+
+		return row;
+	});
 
 	// Attempt to coerce fields to various types (Date, Number)
 	let typedRecords = findTypes(records);
