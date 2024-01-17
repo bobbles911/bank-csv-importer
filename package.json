@@ -6,8 +6,8 @@
     "any-date-parser": "^1.5.4"
   },
   "scripts": {
-    "test" : "node test.js"
+    "test": "node test.js"
   },
   "type": "module",
-  "version": "0.0.3"
+  "version": "0.0.4"
 }
