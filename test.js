@@ -86,4 +86,6 @@ if (errors.length == 0) {
 	for (let error of errors) {
 		console.log(error);
 	}
+
+	process.exit(1);
 }

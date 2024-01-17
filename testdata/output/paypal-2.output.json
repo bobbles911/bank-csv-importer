@@ -1,0 +1,168 @@
+{
+	"header": [
+		"Date",
+		"Time",
+		"Time zone",
+		"Name",
+		"Type",
+		"Status",
+		"Currency",
+		"Amount",
+		"Receipt ID",
+		"Balance"
+	],
+	"records": [
+		[
+			"19/07/2020",
+			"03:11:11",
+			"BST",
+			"",
+			"AAAAaaa AAAAaaa AAAAaaa AAAAaaa",
+			"Pending",
+			"GBP",
+			"11.00",
+			"",
+			"0.00"
+		],
+		[
+			"19/07/2020",
+			"04:11:11",
+			"BST",
+			"AAAAaaa",
+			"AAAAaaa-AAAAaaa AAAAaaa AAAAaaa",
+			"Completed",
+			"GBP",
+			"-11.00",
+			"",
+			"-11.00"
+		],
+		[
+			"08/03/2021",
+			"16:11:11",
+			"GMT",
+			"",
+			"AAAAaaa AAAAaaa AAAAaaa",
+			"Pending",
+			"GBP",
+			"33.00",
+			"",
+			"0.00"
+		],
+		[
+			"20/03/2021",
+			"11:11:11",
+			"GMT",
+			"",
+			"AAAAaaa AAAAaaa AAAAaaa",
+			"Completed",
+			"GBP",
+			"44.44",
+			"",
+			"44.44"
+		],
+		[
+			"20/03/2021",
+			"11:11:11",
+			"GMT",
+			"AAAAaaa AAA",
+			"AAAAaaa AAAAaaa",
+			"Completed",
+			"GBP",
+			"-22.22",
+			"",
+			"0.00"
+		],
+		[
+			"24/03/2021",
+			"07:11:11",
+			"GMT",
+			"",
+			"AAAAaaa AAAAaaa AAAAaaa AAAAaaa",
+			"Pending",
+			"GBP",
+			"2.00",
+			"",
+			"0.00"
+		]
+	],
+	"typedRecords": [
+		[
+			"2020-07-19T00:00:00.000Z",
+			"2000-01-01T03:11:11.000Z",
+			"BST",
+			"",
+			"AAAAaaa AAAAaaa AAAAaaa AAAAaaa",
+			"Pending",
+			"GBP",
+			11,
+			"",
+			0
+		],
+		[
+			"2020-07-19T00:00:00.000Z",
+			"2000-01-01T04:11:11.000Z",
+			"BST",
+			"AAAAaaa",
+			"AAAAaaa-AAAAaaa AAAAaaa AAAAaaa",
+			"Completed",
+			"GBP",
+			-11,
+			"",
+			-11
+		],
+		[
+			"2021-03-08T00:00:00.000Z",
+			"2000-01-01T16:11:11.000Z",
+			"GMT",
+			"",
+			"AAAAaaa AAAAaaa AAAAaaa",
+			"Pending",
+			"GBP",
+			33,
+			"",
+			0
+		],
+		[
+			"2021-03-20T00:00:00.000Z",
+			"2000-01-01T11:11:11.000Z",
+			"GMT",
+			"",
+			"AAAAaaa AAAAaaa AAAAaaa",
+			"Completed",
+			"GBP",
+			44.44,
+			"",
+			44.44
+		],
+		[
+			"2021-03-20T00:00:00.000Z",
+			"2000-01-01T11:11:11.000Z",
+			"GMT",
+			"AAAAaaa AAA",
+			"AAAAaaa AAAAaaa",
+			"Completed",
+			"GBP",
+			-22.22,
+			"",
+			0
+		],
+		[
+			"2021-03-24T00:00:00.000Z",
+			"2000-01-01T07:11:11.000Z",
+			"GMT",
+			"",
+			"AAAAaaa AAAAaaa AAAAaaa AAAAaaa",
+			"Pending",
+			"GBP",
+			2,
+			"",
+			0
+		]
+	],
+	"headerGuesses": {
+		"date": 0,
+		"amount": 7,
+		"balance": 9,
+		"description": 4
+	}
+}

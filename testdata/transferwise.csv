@@ -1,0 +1,8 @@
+"TransferWise ID",Date,Amount,Currency,Description,"Payment Reference","Running Balance","Exchange From","Exchange To","Exchange Rate","Payer Name","Payee Name","Payee Account Number",Merchant,"Card Last Four Digits","Card Holder Full Name",Attachment,Note,"Total fees"
+CARD-25253252,05-04-2021,-1.22,GBP,"AAAAaaa AAAAaaa 1.11 AA AAAAaaa *AAAAaaa a.aa/aaa#",,3333.33,,,,,,,"AAAAaaa *AAAAaaa a.aa/aaaa#",,,,,0.00
+TRANSFER-25253252,25-03-2021,-22.22,GBP,"AAAAaaa AAAAaaa AAAAaaa",,3333.22,GBP,USD,22.2222,,"AAAAaaa AAAAaaa",34534534636,,,,,,0.11
+CARD-234324234,22-03-2021,-1.11,GBP,"AAAAaaa AAAAaaa 1.11 GBP AAAAaaa AAAAaaa *AAAAaaa 2434234",,222.22,,,,,,,"AAAAaaa *AAAAaaa AAAAaaa",,,,,0.00
+TRANSFER-43535,21-03-2021,2222.00,GBP,"AAAAaaa AAAAaaa AAAAaaa",AAAAaaaAAAAaaa,3333.33,,,,"AAAAaaa AAAAaaa",,,,,,,,0.00
+CARD-3243255,21-03-2021,-11.11,GBP,"AAAAaaa AAAAaaa 11.11 AA AAAAaaa O*24324-324234-324 AAAAaaa",,222.22,,,,,,,"AAAAaaa O*23-2323 AAAAaaa",,,,,0.00
+TRANSFER-436346,23-04-2020,1000.00,GBP,"AAAAaaa AAAAaaa AAAAaaa AAAAaaa AAAAaaa",AAAAaaa,222.22,,,,"AAAAaaa AAAAaaa",,,,,,,,0.00
+CARD-234234234,06-04-2020,-22.22,GBP,"AAAAaaa AAAAaaa 222.22 AAA AAAAaaa AAAAaaa",,333.33,GBP,USD,33.3333,,,,"AAAAaaa AAAAaaa AAAAaaa",,,,,0.04

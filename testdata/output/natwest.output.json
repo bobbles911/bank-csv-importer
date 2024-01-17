@@ -1,0 +1,201 @@
+{
+	"header": [
+		"Date",
+		"Type",
+		"Description",
+		"Value",
+		"Balance",
+		"Account Name",
+		"Account Number"
+	],
+	"records": [
+		[
+			"01/04/2021",
+			"S/O",
+			"AAAAAA AAAAAA , AA 01/04/21 11 , 3453464564336sd",
+			"-11",
+			"1111.11",
+			"AAAAAA AAAAAA",
+			"1234567-1111111"
+		],
+		[
+			"24/03/2021",
+			"POS",
+			"32423 sd3434 , AAAAAA.AAAAAA.AA , AAAAAA AAAAAA , AAA 11.11, AAAAAA 1.1111, A-A AAA AAAAAA 0.11",
+			"-33.22",
+			"324324.33",
+			"AAAAAA AAAAAA",
+			"1234567-1111111"
+		],
+		[
+			"15/03/2021",
+			"D/D",
+			"AAAAAA AAAAAA",
+			"-222.2",
+			"2323.23",
+			"AAAAAA AAAAAA",
+			"1234567-1111111"
+		],
+		[
+			"10/03/2021",
+			"S/O",
+			"AAAAAA AAAAAA",
+			"-22",
+			"24234.33",
+			"AAAAAA AAAAAA",
+			"1234567-1111111"
+		],
+		[
+			"24/04/2020",
+			"POS",
+			"213213 123213 , AAAAAA.AAAAAA.AA , AAAAAA AAAAAA , AAA 22.22, AAAAAA 1.11, A-A AAA AAAAAA 1.11",
+			"-33.33",
+			"24234.33",
+			"AAAAAA AAAAAA",
+			"1234567-1111111"
+		],
+		[
+			"23/04/2020",
+			"BAC",
+			"AAAAAA AAAAAA",
+			"2222.22",
+			"333.33",
+			"AAAAAA AAAAAA",
+			"1234567-1111111"
+		],
+		[
+			"16/04/2020",
+			"POS",
+			"423324 342sf43 , AAAAAA* AAAAAA , 234234-234324 AA , AAA 11.00, AAAA 1.111, A-A AAA AAA 0.11",
+			"-33.34",
+			"3433.22",
+			"AAAAAA AAAAAA",
+			"1234567-1111111"
+		],
+		[
+			"14/04/2020",
+			"S/O",
+			"AAAAAA AAAAAA",
+			"-222",
+			"3433.22",
+			"AAAAAA AAAAAA",
+			"1234567-1111111"
+		],
+		[
+			"08/04/2020",
+			"D/D",
+			"AAAAAA AAAAAA",
+			"-2.22",
+			"3444.22",
+			"AAAAAA AAAAAA",
+			"1234567-1111111"
+		],
+		[
+			"06/04/2020",
+			"POS",
+			"423324 43werf3 , AAAAAA AAA , AAAAAA.AAAAAA.a AA",
+			"-33.55",
+			"23434.33",
+			"AAAAAA AAAAAA",
+			"1234567-1111111"
+		]
+	],
+	"typedRecords": [
+		[
+			"2021-04-01T00:00:00.000Z",
+			"S/O",
+			"AAAAAA AAAAAA , AA 01/04/21 11 , 3453464564336sd",
+			-11,
+			1111.11,
+			"AAAAAA AAAAAA",
+			"1234567-1111111"
+		],
+		[
+			"2021-03-24T00:00:00.000Z",
+			"POS",
+			"32423 sd3434 , AAAAAA.AAAAAA.AA , AAAAAA AAAAAA , AAA 11.11, AAAAAA 1.1111, A-A AAA AAAAAA 0.11",
+			-33.22,
+			324324.33,
+			"AAAAAA AAAAAA",
+			"1234567-1111111"
+		],
+		[
+			"2021-03-15T00:00:00.000Z",
+			"D/D",
+			"AAAAAA AAAAAA",
+			-222.2,
+			2323.23,
+			"AAAAAA AAAAAA",
+			"1234567-1111111"
+		],
+		[
+			"2021-03-10T00:00:00.000Z",
+			"S/O",
+			"AAAAAA AAAAAA",
+			-22,
+			24234.33,
+			"AAAAAA AAAAAA",
+			"1234567-1111111"
+		],
+		[
+			"2020-04-24T00:00:00.000Z",
+			"POS",
+			"213213 123213 , AAAAAA.AAAAAA.AA , AAAAAA AAAAAA , AAA 22.22, AAAAAA 1.11, A-A AAA AAAAAA 1.11",
+			-33.33,
+			24234.33,
+			"AAAAAA AAAAAA",
+			"1234567-1111111"
+		],
+		[
+			"2020-04-23T00:00:00.000Z",
+			"BAC",
+			"AAAAAA AAAAAA",
+			2222.22,
+			333.33,
+			"AAAAAA AAAAAA",
+			"1234567-1111111"
+		],
+		[
+			"2020-04-16T00:00:00.000Z",
+			"POS",
+			"423324 342sf43 , AAAAAA* AAAAAA , 234234-234324 AA , AAA 11.00, AAAA 1.111, A-A AAA AAA 0.11",
+			-33.34,
+			3433.22,
+			"AAAAAA AAAAAA",
+			"1234567-1111111"
+		],
+		[
+			"2020-04-14T00:00:00.000Z",
+			"S/O",
+			"AAAAAA AAAAAA",
+			-222,
+			3433.22,
+			"AAAAAA AAAAAA",
+			"1234567-1111111"
+		],
+		[
+			"2020-04-08T00:00:00.000Z",
+			"D/D",
+			"AAAAAA AAAAAA",
+			-2.22,
+			3444.22,
+			"AAAAAA AAAAAA",
+			"1234567-1111111"
+		],
+		[
+			"2020-04-06T00:00:00.000Z",
+			"POS",
+			"423324 43werf3 , AAAAAA AAA , AAAAAA.AAAAAA.a AA",
+			-33.55,
+			23434.33,
+			"AAAAAA AAAAAA",
+			"1234567-1111111"
+		]
+	],
+	"headerGuesses": {
+		"date": 0,
+		"amount": 3,
+		"balance": 4,
+		"description": 2
+	}
+}

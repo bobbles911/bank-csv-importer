@@ -1,0 +1,116 @@
+{
+	"header": [
+		"Number",
+		"Date",
+		"Account",
+		"Amount",
+		"Subcategory",
+		"Memo"
+	],
+	"records": [
+		[
+			"",
+			"20/04/2018",
+			"11-11-11 1234456",
+			"-1.22",
+			"PAYMENT",
+			"AAAAAA AAAAAA - I    AAAAAA"
+		],
+		[
+			"",
+			"03/04/2018",
+			"11-11-11 1234456",
+			"-222.00",
+			"FT",
+			"234234 34543543       2344 sdfsdfsdf     AA"
+		],
+		[
+			"null",
+			"20/03/2018",
+			"11-11-11 1234456",
+			"-22.22",
+			"DIRECTDEBIT",
+			"AAAAAA AAAAAA       dfgdfgdfg 001 00    AAA"
+		],
+		[
+			"null",
+			"27/05/2014",
+			"11-11-11 1234456",
+			"22.12",
+			"DIRECTDEP",
+			"AAAAAA AAAAAA        sdfsdfsdf         AAA"
+		],
+		[
+			"",
+			"08/05/2014",
+			"11-11-11 1234456",
+			"-53.00",
+			"DIRECTDEBIT",
+			"AAAAAA            sdfsdgsdg        AAA"
+		],
+		[
+			"",
+			"08/05/2014",
+			"11-11-11 1234456",
+			"-22.00",
+			"DIRECTDEBIT",
+			"AAAAAA AAAAAA AAAAAA        342345235/463446   AAA"
+		]
+	],
+	"typedRecords": [
+		[
+			"",
+			"2018-04-20T00:00:00.000Z",
+			"11-11-11 1234456",
+			-1.22,
+			"PAYMENT",
+			"AAAAAA AAAAAA - I    AAAAAA"
+		],
+		[
+			"",
+			"2018-04-03T00:00:00.000Z",
+			"11-11-11 1234456",
+			-222,
+			"FT",
+			"234234 34543543       2344 sdfsdfsdf     AA"
+		],
+		[
+			"null",
+			"2018-03-20T00:00:00.000Z",
+			"11-11-11 1234456",
+			-22.22,
+			"DIRECTDEBIT",
+			"AAAAAA AAAAAA       dfgdfgdfg 001 00    AAA"
+		],
+		[
+			"null",
+			"2014-05-27T00:00:00.000Z",
+			"11-11-11 1234456",
+			22.12,
+			"DIRECTDEP",
+			"AAAAAA AAAAAA        sdfsdfsdf         AAA"
+		],
+		[
+			"",
+			"2014-05-08T00:00:00.000Z",
+			"11-11-11 1234456",
+			-53,
+			"DIRECTDEBIT",
+			"AAAAAA            sdfsdgsdg        AAA"
+		],
+		[
+			"",
+			"2014-05-08T00:00:00.000Z",
+			"11-11-11 1234456",
+			-22,
+			"DIRECTDEBIT",
+			"AAAAAA AAAAAA AAAAAA        342345235/463446   AAA"
+		]
+	],
+	"headerGuesses": {
+		"date": 1,
+		"amount": 3,
+		"balance": null,
+		"description": 5
+	}
+}

@@ -1,0 +1,7 @@
+﻿"Date","Time","Time zone","Name","Type","Status","Currency","Amount","Receipt ID","Balance"
+"19/07/2020","03:11:11","BST","","AAAAaaa AAAAaaa AAAAaaa AAAAaaa","Pending","GBP","11.00","","0.00"
+"19/07/2020","04:11:11","BST","AAAAaaa","AAAAaaa-AAAAaaa AAAAaaa AAAAaaa","Completed","GBP","-11.00","","-11.00"
+"08/03/2021","16:11:11","GMT","","AAAAaaa AAAAaaa AAAAaaa","Pending","GBP","33.00","","0.00"
+"20/03/2021","11:11:11","GMT","","AAAAaaa AAAAaaa AAAAaaa","Completed","GBP","44.44","","44.44"
+"20/03/2021","11:11:11","GMT","AAAAaaa AAA","AAAAaaa AAAAaaa","Completed","GBP","-22.22","","0.00"
+"24/03/2021","07:11:11","GMT","","AAAAaaa AAAAaaa AAAAaaa AAAAaaa","Pending","GBP","2.00","","0.00"
