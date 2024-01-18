@@ -12,7 +12,7 @@ After importing a CSV file, the result is:
 
 ```
 {
-	header, // The header row, if one was present and it was autodetected
+	header, // The header row, if one was present and it was autodetected. null if not present.
 	records : [], // records, split by separator and with header line removed
 	typedRecords : [], // same as above but with some fields converted to Date or Number where possible
 	headerGuesses : { // if any of these could not be guessed it will be null
@@ -30,7 +30,7 @@ Also some parse* functions are exported, which can be useful if you don't want t
 const {parseNumber, parseDate} = require("bank-csv-importer");
 
 // Return null if could not be parsed
-// parsedate uses "any-date-parser" and will greedily parse a lot of things as dates, so it's best to use parseNumber first,
+// parseDate uses "any-date-parser" and will greedily parse a lot of things as dates, so it's best to use parseNumber first,
 // and if that fails, try parseDate.
 console.log(parseNumber("1.123"));
 console.log(parseDate("1/1/2021"));
