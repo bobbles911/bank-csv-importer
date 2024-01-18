@@ -115,8 +115,8 @@ function splitLinesToFields(lines, sep) {
 
 // Passed records must have already been converted to types
 function detectFirstLineHeader(typedRecords) {
-	if (typedRecords.length < 2) {
-		return typedRecords;
+	if (typedRecords.length < 2) { // Must be at least two rows
+		return false;
 	}
 
 	// if first line contains no date in a certain column, AND second line does
@@ -192,11 +192,11 @@ export default function(data, options = {headerKeywordMatching : true}) {
 	// Attempt to coerce fields to various types (Date, Number)
 	let typedRecords = findTypes(records);
 
-	// Detect and remove a first line header, if present
-
 	let header = null;
 
-	if (detectFirstLineHeader(typedRecords)) {
+	// Detect and remove a first line header, if present
+	// Must be two or more rows. A single row should be considered a row and not a header!
+	if (records.length > 1 && detectFirstLineHeader(typedRecords)) {
 		header = records[0];
 		// Remove from both copies of data
 		records = records.slice(1);
