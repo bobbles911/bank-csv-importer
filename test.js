@@ -47,7 +47,8 @@ function testdir(dirPath) {
 			let data = fs.readFileSync(testDataPath, "utf-8");
 
 			try {
-				let result = bankImport(data);
+				let result = bankImport(data, {headerKeywordMatching : true});
+				let resultNoKeywords = bankImport(data, {headerKeywordMatching : false});
 
 				let resultsPath = path.join(dirPath, "output", path.basename(fileName, ".csv") + ".output.json");
 				let typesPath = path.join(dirPath, "output", path.basename(fileName, ".csv") + ".output.types.json");
@@ -125,6 +126,14 @@ function testdir(dirPath) {
 								+ `Expected ${headerGuessName} at index ${index} but got index `
 								+ result.headerGuesses[headerGuessName]);
 						}
+
+						// For informational purposes, also show the mismatches when keywords are not used
+						if (resultNoKeywords.headerGuesses[headerGuessName] !== index) {
+							console.log(`	(info) Expected header guess mismatch when no keywords were used: `
+								+ `${testDataPath}: `
+								+ `Expected ${headerGuessName} at index ${index} but got index `
+								+ resultNoKeywords.headerGuesses[headerGuessName]);
+						}
 					}
 				} catch (error) {
 					if (error.code == "ENOENT") {
@@ -144,9 +153,9 @@ testdir("testdata");
 testdir("testdata-private");
 
 if (errors.length == 0) {
-	console.log("Success, no errors.");
+	console.log("\nSuccess, no errors.");
 } else {
-	console.log("ERRORS FOUND!!!");
+	console.log("\nERRORS FOUND!!!");
 
 	for (let error of errors) {
 		console.log(error);
