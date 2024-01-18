@@ -104,7 +104,7 @@ function testdir(dirPath) {
 							}
 
 							if (row[i].constructor.name !== expected.entireRowTypes[i]) {
-								errors.push(`Expected entire row type mismatch: ${fileName}: `
+								errors.push(`Expected entire row type mismatch: ${testDataPath}: `
 									+ "Expected " + expected.entireRowTypes[i] + " but got: "
 									+ `"${row[i]}" (${row[i].constructor.name})`
 									+ `\n	Column: ${i}`
@@ -121,7 +121,7 @@ function testdir(dirPath) {
 
 						// Header guess index of result must equal that of expected
 						if (result.headerGuesses[headerGuessName] !== index) {
-							errors.push(`Expected header guess mismatch: ${fileName}: `
+							errors.push(`Expected header guess mismatch: ${testDataPath}: `
 								+ `Expected ${headerGuessName} at index ${index} but got index `
 								+ result.headerGuesses[headerGuessName]);
 						}
