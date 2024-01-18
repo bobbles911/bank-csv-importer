@@ -141,6 +141,7 @@
 			111
 		]
 	],
+	"numColumns": 4,
 	"headerGuesses": {
 		"date": 0,
 		"amount": 3,

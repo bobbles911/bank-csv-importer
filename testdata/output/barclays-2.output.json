@@ -107,6 +107,7 @@
 			"AAAAAA AAAAAA AAAAAA        342345235/463446   AAA"
 		]
 	],
+	"numColumns": 6,
 	"headerGuesses": {
 		"date": 1,
 		"amount": 3,

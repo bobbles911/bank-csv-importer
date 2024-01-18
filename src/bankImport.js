@@ -223,6 +223,7 @@ export default function(data, options = {headerKeywordMatching : true}) {
 		header,
 		records,
 		typedRecords,
+		numColumns : longestFieldCount,
 		headerGuesses
 	};
 }

@@ -138,6 +138,7 @@
 			""
 		]
 	],
+	"numColumns": 7,
 	"headerGuesses": {
 		"date": 1,
 		"amount": 3,

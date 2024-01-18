@@ -192,6 +192,7 @@
 			"1234567-1111111"
 		]
 	],
+	"numColumns": 7,
 	"headerGuesses": {
 		"date": 0,
 		"amount": 3,

@@ -476,6 +476,7 @@
 			"Credit"
 		]
 	],
+	"numColumns": 41,
 	"headerGuesses": {
 		"date": 0,
 		"amount": 7,

@@ -318,6 +318,7 @@
 			0.04
 		]
 	],
+	"numColumns": 19,
 	"headerGuesses": {
 		"date": 1,
 		"amount": 2,
