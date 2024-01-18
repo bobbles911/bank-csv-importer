@@ -142,7 +142,7 @@ function detectFirstLineHeader(typedRecords) {
 	return firstLineIsHeader;
 }
 
-export default function(data) {
+export default function(data, options = {headerKeywordMatching : true}) {
 	let lines = getLines(data);
 
 	if (lines.length == 0) {
@@ -204,7 +204,7 @@ export default function(data) {
 	}
 
 	// Guess headers
-	let headerGuesses = guessHeaders(header, typedRecords);
+	let headerGuesses = guessHeaders(header, typedRecords, options.headerKeywordMatching);
 
 	/*
 	{
