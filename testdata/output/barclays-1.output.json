@@ -92,6 +92,14 @@
 		]
 	],
 	"numColumns": 6,
+	"entireColumnTypes": [
+		null,
+		"Date",
+		"String",
+		"Number",
+		"String",
+		"String"
+	],
 	"headerGuesses": {
 		"date": 1,
 		"amount": 3,

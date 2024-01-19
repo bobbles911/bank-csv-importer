@@ -319,6 +319,27 @@
 		]
 	],
 	"numColumns": 19,
+	"entireColumnTypes": [
+		"String",
+		"Date",
+		"Number",
+		"String",
+		"String",
+		"String",
+		"Number",
+		"String",
+		"String",
+		null,
+		"String",
+		"String",
+		null,
+		"String",
+		"String",
+		"String",
+		"String",
+		"String",
+		"Number"
+	],
 	"headerGuesses": {
 		"date": 1,
 		"amount": 2,

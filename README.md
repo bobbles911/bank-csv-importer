@@ -15,6 +15,10 @@ After importing a CSV file, the result is:
 	header, // The header row, if one was present and it was autodetected. null if not present.
 	records : [], // records, split by separator and with header line removed
 	typedRecords : [], // same as above but with some fields converted to Date or Number where possible
+	numColumns,
+	// For each column, whether all the typedRecords in that column are of the same type
+	// Will be null if there are mixed types
+	entireColumnTypes : ["String", "Number", "Date", null],
 	headerGuesses : { // if any of these could not be guessed it will be null
 		date : 0,
 		amount : 1,

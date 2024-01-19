@@ -160,6 +160,18 @@
 		]
 	],
 	"numColumns": 10,
+	"entireColumnTypes": [
+		"Date",
+		"Date",
+		"String",
+		"String",
+		"String",
+		"String",
+		"String",
+		"Number",
+		"String",
+		"Number"
+	],
 	"headerGuesses": {
 		"date": 0,
 		"amount": 7,

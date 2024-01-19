@@ -142,6 +142,18 @@ function detectFirstLineHeader(typedRecords) {
 	return firstLineIsHeader;
 }
 
+function getEntireColumnTypes(typedRecords) {
+	const numColumns = typedRecords[0].length;
+
+	return new Array(numColumns).fill(null).map((_columnType, i) => {
+		const firstValueType = typedRecords[0][i].constructor.name;
+
+		// Check if each value is of the same type
+		return typedRecords.every(row => row[i].constructor.name === firstValueType) ?
+			firstValueType : null;
+	});
+}
+
 export default function(data, options = {headerKeywordMatching : true}) {
 	let lines = getLines(data);
 
@@ -224,6 +236,7 @@ export default function(data, options = {headerKeywordMatching : true}) {
 		records,
 		typedRecords,
 		numColumns : longestFieldCount,
+		entireColumnTypes : getEntireColumnTypes(typedRecords),
 		headerGuesses
 	};
 }
