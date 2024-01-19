@@ -1,5 +1,5 @@
 {
-	"entireRowTypes" : ["Date", null, null, "Number"],
+	"entireColumnTypes" : ["Date", null, null, "Number"],
 	"headerGuesses" : {
 		"date" : 0,
 		"amount" : 3,

@@ -102,16 +102,16 @@ function testdir(dirPath) {
 				try {
 					const expected = JSON.parse(fs.readFileSync(expectedPath, {encoding : "utf8"}));
 
-					// Compare if entire columns match the type given by expected.entireRowTypes array
+					// Compare if entire columns match the type given by expected.entireColumnTypes array
 					result.typedRecords.forEach((row, index) => {
-						for (let i = 0; i < expected.entireRowTypes.length; i ++) {
-							if (expected.entireRowTypes[i] === null) {
+						for (let i = 0; i < expected.entireColumnTypes.length; i ++) {
+							if (expected.entireColumnTypes[i] === null) {
 								continue; // skip null
 							}
 
-							if (row[i].constructor.name !== expected.entireRowTypes[i]) {
-								errors.push(`Expected entire row type mismatch: ${testDataPath}: `
-									+ "Expected " + expected.entireRowTypes[i] + " but got: "
+							if (row[i].constructor.name !== expected.entireColumnTypes[i]) {
+								errors.push(`Expected entire column type mismatch: ${testDataPath}: `
+									+ "Expected " + expected.entireColumnTypes[i] + " but got: "
 									+ `"${row[i]}" (${row[i].constructor.name})`
 									+ `\n	Column: ${i}`
 									+ `\n	Row: ${index}: ${row}`);
